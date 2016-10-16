@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color: #fafafa;
+	-fx-font-family: "Roboto Medium";
+	-fx-font-size: 14.0;
+}
+
+/* Efecto */
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -fx-rippler-fill:#fff3e0;
+}
+
+/* Linea */
+.jfx-tab-pane .tab-header-area .tab-selected-line{
+    -fx-stroke : #ffa726 ;
+}
+
+/* Fondo */
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color:#263238 ;
+}

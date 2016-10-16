@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <StackPane>
+         <children>
+            <AnchorPane prefHeight="241.0" prefWidth="543.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="37.0" layoutY="14.0" text="Formulario de crearción de especialistas." />
+                  <GridPane hgap="14.0" layoutX="38.0" layoutY="41.0" prefHeight="185.0" prefWidth="524.0" vgap="10.0">
+                     <children>
+                        <Label fx:id="lblName" text="Nombre: " />
+                        <Label fx:id="lblLastName" text="Apellido:" GridPane.rowIndex="1" />
+                        <Label fx:id="lblPosition" text="Cargo:" GridPane.rowIndex="2" />
+                        <Label fx:id="lblEmail" text="Correo:" GridPane.rowIndex="3" />
+                        <Label fx:id="lblEntity" text="Entidad:" GridPane.columnIndex="2" />
+                        <Label text="Genero:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="lblPassword" text="Contraseña:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <JFXCheckBox fx:id="ckbWoman" text="Mujer" />
+                              <JFXCheckBox fx:id="ckbMan" text="Hombre" GridPane.columnIndex="1" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <JFXTextField fx:id="txtName" focusColor="#ff5722" promptText="Nombre" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="txtLastName" focusColor="#ff5722" promptText="Apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtPosition" focusColor="#ff5722" promptText="Cargo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtEmail" focusColor="#ff5722" promptText="Correo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXPasswordField fx:id="txtPasswordSpecialist" focusColor="#ff5722" promptText="Contraseña" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXComboBox fx:id="cbxEntity" prefHeight="25.0" prefWidth="197.0" promptText="Entidad" GridPane.columnIndex="3" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="57.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="176.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="71.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="178.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <GridPane hgap="15.0" prefHeight="79.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="btnCreate" onAction="#createSpecialist" prefHeight="25.0" prefWidth="98.0" ripplerFill="#66bb6a" style="-fx-background-color: #263238;" text="Crear" textFill="#bdbdbd" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btnCancel" onAction="#cancelCreateSpecialist" prefHeight="25.0" prefWidth="131.0" ripplerFill="#ef5350" style="-fx-background-color: #263238;" text="Salir" textFill="#bdbdbd" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

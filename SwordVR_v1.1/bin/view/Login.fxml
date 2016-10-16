@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../resources/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <JFXTabPane fx:id="jfxTabPane" layoutY="87.0" prefHeight="359.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+          <Tab closable="false" text="Especialista">
+               <content>
+                  <fx:include fx:id="tabUser" source="tab/TabUser.fxml" />
+               </content>
+          </Tab>
+          <Tab closable="false" text="Administrador">
+               <content>
+                  <fx:include fx:id="tabAdmin" source="tab/TabAdmin.fxml" />
+               </content>
+          </Tab>
+         </tabs>
+         <effect>
+            <Blend />
+         </effect>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

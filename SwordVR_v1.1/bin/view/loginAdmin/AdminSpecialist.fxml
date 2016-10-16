@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adminSpecialist.AdminSpecialistController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="tblViewSpecialist" prefHeight="291.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="clmnId" prefWidth="110.0" text="Id" />
+                <TableColumn fx:id="clmnName" prefWidth="110.0" text="Nombre" />
+                  <TableColumn fx:id="clmnLastName" prefWidth="110.0" text="Apellido" />
+                  <TableColumn fx:id="clmnPosition" prefWidth="110.0" text="Cargo" />
+                  <TableColumn fx:id="clmnEmail" prefWidth="110.0" text="Correo" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <AnchorPane prefHeight="35.0" prefWidth="580.0" style="-fx-background-color: #b0bec5;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXToolbar layoutX="14.0" prefHeight="49.0" prefWidth="236.0">
+                     <left>
+                        <JFXButton fx:id="btnCreateSpecialist" buttonType="RAISED" contentDisplay="CENTER" onAction="#showCreateSpecialist" prefHeight="30.0" prefWidth="67.0" ripplerFill="#4caf50" style="-fx-background-color: #263238; -fx-background-radius: 6;" text="Crear" textAlignment="CENTER" textFill="#bfbfbf" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </left>
+                     <center>
+                        <JFXButton fx:id="btnDeleteSpecialist" buttonType="RAISED" onAction="#deleteSpecialist" prefHeight="30.0" prefWidth="67.0" ripplerFill="#f44336" style="-fx-background-color: #263238; -fx-background-radius: 6;" text="Borrar" textFill="#bfbfbf" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </center>
+                     <right>
+                        <JFXButton fx:id="btnEditSpecialist" buttonType="RAISED" onAction="#showEditSpecialist" prefHeight="30.0" prefWidth="69.0" ripplerFill="WHITESMOKE" style="-fx-background-color: #263238; -fx-background-radius: 6;" text="Editar" textFill="#bfbfbf" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </JFXToolbar>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
